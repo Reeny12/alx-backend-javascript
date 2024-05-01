@@ -25,4 +25,33 @@ interface Teacher {
 
 printTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string => {
     return `${firstName.charAt(0)}. ${lastName}`;
-};
+    };
+
+
+    interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+    }
+
+    interface StudentMethods {
+    workOnHomework(): string;
+    displayName(): string;
+    }
+
+    class StudentClass implements StudentMethods {
+    private firstName: string;
+    private lastName: string;
+
+    constructor({ firstName, lastName }: StudentConstructor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return "Currently working";
+	}
+
+	displayName(): string {
+        return this.firstName;
+    }
+}
