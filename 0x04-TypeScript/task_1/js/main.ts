@@ -10,3 +10,19 @@ interface Teacher {
     interface Directors extends Teacher {
     numberOfReports: number;
     }
+
+    interface PrintTeacherFunction {
+    (firstName: string, lastName: string): string;
+    }
+
+    printTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+    };
+
+    interface PrintTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+printTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
