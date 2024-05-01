@@ -5,4 +5,8 @@ interface Teacher {
     yearsOfExperience?: number;
     location: string;
     [propName: string]: any;  // Allows for additional attributes of any type
-}
+    }
+
+    interface Directors extends Teacher {
+    numberOfReports: number;
+    }
